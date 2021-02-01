@@ -15,10 +15,6 @@ import AppLayout from "layouts/AppLayout";
 export default function Home() {
   return (
     <AppLayout>
-      <Head>
-        <title>Melchior's Resume</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <Header />
       <About />
     </AppLayout>
