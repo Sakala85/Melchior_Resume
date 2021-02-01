@@ -1,6 +1,5 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
-import styles from "styles/Home.module.css";
 import Header from "components/Header";
 import About from "components/About";
 import {
