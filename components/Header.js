@@ -53,7 +53,7 @@ const Title = styled(Typography).attrs({
   gutterBottom: true,
 })`
   ${(props) => props.theme.breakpoints.down("sm")} {
-    font-weight: 600;
+    font-size: 3rem !important;
   }
   && {
     font-weight: 700;
@@ -76,6 +76,9 @@ const Subtitle = styled(Typography).attrs({
   variant: "h3",
   component: "h4",
 })`
+  ${(props) => props.theme.breakpoints.down("sm")} {
+    font-size: 2.3rem !important;
+  }
   && {
     color: #ffffff;
     span {
@@ -93,7 +96,7 @@ const Header = () => {
           <Box marginBottom={2}>
             <Title>Melchior Bengtsson</Title>
             <Subtitle>
-              <span>Developer Fuul Stack</span>
+              <span>Developer Full Stack</span>
             </Subtitle>
           </Box>
           <Box marginY={6} style={{ marginTop: "3vh" }}>
@@ -116,7 +119,12 @@ const Header = () => {
           <Grid
             container
             spacing={3}
-            style={{ width: "60%", margin: "0 auto", marginTop: "5vh" }}
+            style={{
+              width: "60%",
+              margin: "0 auto",
+              marginTop: "5vh",
+              height: "100%",
+            }}
           >
             <Grid item md={3} xs={6}>
               <StyledLinkBox>

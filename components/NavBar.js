@@ -11,24 +11,17 @@ import {
 } from "@material-ui/core";
 import styled from "styled-components";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import {
-  Visibility,
-  GetApp,
-  LocationOn,
-  Mail,
-  Phone,
-} from "@material-ui/icons";
+import { School, Info, Work, Home, Favorite } from "@material-ui/icons";
 
 const transition = "250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms";
 
 const StyledContainer = styled(Container)`
   position: fixed;
   right: 0;
-  width: 140px;
+  width: 50px;
   z-index: 1;
-  margin-top: auto;
   height: 30px;
-  margin-top: 30vh;
+  margin-bottom: 0vh;
   text-align: center;
   color: #ffcc00;
 `;
@@ -40,7 +33,7 @@ const StyledLinkBox = styled(Box).attrs({
 
   &:hover {
     cursor: pointer;
-    transform: scale(1.25) rotate(3deg);
+    transform: scale(1.25) rotate(1deg);
   }
 `;
 
@@ -51,16 +44,26 @@ const NavBar = ({ page }) => {
         <Grid xs={12}>
           <StyledLinkBox>
             <ScrollLink to="home" spy={true} smooth={true} duration={500}>
-              <Typography variant={page === "home" ? "h5" : "body1"}>
-                Home
-              </Typography>
+              <Home
+                style={{
+                  fontSize: 30,
+                  color: "#ffcc00",
+                  float: "right",
+                }}
+              />
             </ScrollLink>
           </StyledLinkBox>
         </Grid>
         <Grid xs={12}>
           <StyledLinkBox>
             <ScrollLink to="about" spy={true} smooth={true} duration={500}>
-              <Typography variant="body1">About</Typography>
+              <Info
+                style={{
+                  fontSize: 30,
+                  color: "#ffcc00",
+                  float: "right",
+                }}
+              />
             </ScrollLink>
           </StyledLinkBox>
         </Grid>
@@ -72,7 +75,13 @@ const NavBar = ({ page }) => {
               smooth={true}
               duration={500}
             >
-              <Typography variant="body1">Experiences</Typography>
+              <Work
+                style={{
+                  fontSize: 30,
+                  color: "#ffcc00",
+                  float: "right",
+                }}
+              />
             </ScrollLink>
           </StyledLinkBox>
         </Grid>
