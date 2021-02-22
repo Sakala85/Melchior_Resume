@@ -1,6 +1,11 @@
 import Head from "next/head";
 import NextNProgress from "nextjs-progressbar";
 import { CssBaseline } from "@material-ui/core";
+import { MuiThemeProvider } from "@material-ui/core/styles";
+import getTheme from "helpers/getTheme";
+import { ThemeProvider } from "styled-components";
+
+const theme = getTheme();
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -33,8 +38,11 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <NextNProgress />
       <CssBaseline />
-
-      <Component {...pageProps} />
+      {/* <MuiThemeProvider theme={theme}> */}
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
+      {/* </MuiThemeProvider> */}
     </>
   );
 }
