@@ -17,15 +17,21 @@ import {
   Twitter,
   ArrowDropDown,
 } from "@material-ui/icons";
+import {
+  Link as ScrollLink,
+  animateScroll as scroll,
+  Element,
+} from "react-scroll";
+
 const ParticlesSection = dynamic(() => import("components/ParticlesSection"), {
   ssr: false,
 });
 
 const transition = "250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms";
 
-const StyledContainer = styled(Box)`
+const StyledContainer = styled(Element)`
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
     url(static/header-background.jpg) center center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -44,7 +50,11 @@ const Hero = styled(Box)`
 
 const Title = styled(Typography).attrs({
   variant: "h1",
+  gutterBottom: true,
 })`
+  ${(props) => props.theme.breakpoints.down("sm")} {
+    font-weight: 600;
+  }
   && {
     font-weight: 700;
     color: #ffffff;
@@ -54,8 +64,6 @@ const Title = styled(Typography).attrs({
 const StyledLinkBox = styled(Box).attrs({
   component: ButtonBase,
 })`
-  align-self: center;
-  justify-self: center;
   transition: transform ${transition}, top ${transition};
 
   &:hover {
@@ -76,81 +84,91 @@ const Subtitle = styled(Typography).attrs({
   }
 `;
 
-const Header = () => (
-  <StyledContainer>
-    <ParticlesSection />
-    <Container style={{ position: "relative" }}>
-      <Hero display="flex" flexDirection="column" textAlign="center">
-        <Box marginBottom={2}>
-          <Title>Melchior Bengtsson</Title>
-          <Subtitle>
-            <span>Developer Fuul Stack</span>
-          </Subtitle>
-        </Box>
-        <Box marginY={6} style={{ marginTop: "3vh" }}>
-          <Typography variant="body1" gutterBottom style={{ color: "#ffffff" }}>
-            (Node.js, React, next, React Natif)
-          </Typography>
-          <Typography variant="body1" gutterBottom style={{ color: "#ffffff" }}>
-            I love working to serve an objective who make sense to me, bring my
-            opinion on the project and bring my own point of view.
-          </Typography>
-        </Box>
-        <Grid
-          container
-          spacing={3}
-          style={{ width: "60%", margin: "0 auto", height: "100%" }}
-        >
-          <Grid item md={3} xs={6}>
-            <StyledLinkBox>
-              <Link target="_blank" href="https://github.com/Sakala85">
-                <GitHub style={{ fontSize: 40, color: "white" }} />
-              </Link>
-            </StyledLinkBox>
+const Header = () => {
+  return (
+    <StyledContainer name="home" className="element">
+      <ParticlesSection />
+      <Container style={{ position: "relative" }}>
+        <Hero display="flex" flexDirection="column" textAlign="center">
+          <Box marginBottom={2}>
+            <Title>Melchior Bengtsson</Title>
+            <Subtitle>
+              <span>Developer Fuul Stack</span>
+            </Subtitle>
+          </Box>
+          <Box marginY={6} style={{ marginTop: "3vh" }}>
+            <Typography
+              variant="body1"
+              gutterBottom
+              style={{ color: "#ffffff" }}
+            >
+              (Node.js, React, next, React Natif)
+            </Typography>
+            <Typography
+              variant="body1"
+              gutterBottom
+              style={{ color: "#ffffff", marginTop: "5vh" }}
+            >
+              I love working to serve an objective who make sense to me, bring
+              my opinion on the project and bring my own point of view.
+            </Typography>
+          </Box>
+          <Grid
+            container
+            spacing={3}
+            style={{ width: "60%", margin: "0 auto", marginTop: "5vh" }}
+          >
+            <Grid item md={3} xs={6}>
+              <StyledLinkBox>
+                <Link target="_blank" href="https://github.com/Sakala85">
+                  <GitHub style={{ fontSize: 40, color: "white" }} />
+                </Link>
+              </StyledLinkBox>
+            </Grid>
+            <Grid item md={3} xs={6}>
+              <StyledLinkBox>
+                <Link
+                  target="_blank"
+                  href="https://www.linkedin.com/in/melchior-bengtsson-961349162/"
+                >
+                  <LinkedIn style={{ fontSize: 40, color: "white" }} />
+                </Link>
+              </StyledLinkBox>
+            </Grid>
+            <Grid item md={3} xs={6}>
+              <StyledLinkBox>
+                <Link target="_blank" href="https://twitter.com/melchiobengts">
+                  <Twitter style={{ fontSize: 40, color: "white" }} />
+                </Link>
+              </StyledLinkBox>
+            </Grid>
+            <Grid item md={3} xs={6}>
+              <StyledLinkBox>
+                <Link
+                  target="_blank"
+                  href="https://www.instagram.com/melchiorbengtsson"
+                >
+                  <Instagram style={{ fontSize: 40, color: "white" }} />
+                </Link>
+              </StyledLinkBox>
+            </Grid>
+            <Grid
+              item
+              md={12}
+              style={{ margin: "0 auto", marginTop: "5vh" }}
+              justify="center"
+            >
+              <StyledLinkBox>
+                <ScrollLink to="about" spy={true} smooth={true} duration={500}>
+                  <ArrowDropDown style={{ fontSize: 110, color: "white" }} />
+                </ScrollLink>
+              </StyledLinkBox>
+            </Grid>
           </Grid>
-          <Grid item md={3} xs={6}>
-            <StyledLinkBox>
-              <Link
-                target="_blank"
-                href="https://www.linkedin.com/in/melchior-bengtsson-961349162/"
-              >
-                <LinkedIn style={{ fontSize: 40, color: "white" }} />
-              </Link>
-            </StyledLinkBox>
-          </Grid>
-          <Grid item md={3} xs={6}>
-            <StyledLinkBox>
-              <Link target="_blank" href="https://twitter.com/melchiobengts">
-                <Twitter style={{ fontSize: 40, color: "white" }} />
-              </Link>
-            </StyledLinkBox>
-          </Grid>
-          <Grid item md={3} xs={6}>
-            <StyledLinkBox>
-              <Link
-                target="_blank"
-                href="https://www.instagram.com/melchiorbengtsson"
-              >
-                <Instagram style={{ fontSize: 40, color: "white" }} />
-              </Link>
-            </StyledLinkBox>
-          </Grid>
-          <Grid item md={12} style={{ bottom: 0 }}>
-            <StyledLinkBox style={{ bottom: 0 }}>
-              <Link
-                target="_blank"
-                href="https://www.instagram.com/melchiorbengtsson"
-              >
-                <ArrowDropDown
-                  style={{ fontSize: 70, color: "white", marginTop: "15vh" }}
-                />
-              </Link>
-            </StyledLinkBox>
-          </Grid>
-        </Grid>
-      </Hero>
-    </Container>
-  </StyledContainer>
-);
+        </Hero>
+      </Container>
+    </StyledContainer>
+  );
+};
 
 export default Header;
