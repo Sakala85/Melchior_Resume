@@ -84,7 +84,7 @@ const Header = () => (
         <Box marginBottom={2}>
           <Title>Melchior Bengtsson</Title>
           <Subtitle>
-            <span>Developer Fuul Stack</span>
+            <span>Developer Full Stack</span>
           </Subtitle>
         </Box>
         <Box marginY={6} style={{ marginTop: "3vh" }}>
