@@ -20,12 +20,19 @@ import {
 } from "@material-ui/icons";
 import Countdown from "react-countdown";
 import StyledCountdown from "components/StyledCountdown";
+import InterestGrid from "./InterestGrid";
 
 const transition = "250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms";
 
 const StyledContainer = styled(Element)`
   height: 100%;
   background: #666666;
+  h1 {
+    color: #ffcc00;
+    font-weight: 70;
+    font-size: 20px;
+    text-align: center;
+  }
 `;
 
 const StyledModalBox = styled(Box)`
@@ -53,7 +60,7 @@ const StyledLinkBox = styled(Box).attrs({
 
   &:hover {
     cursor: pointer;
-    transform: scale(1.25) rotate(3deg);
+    transform: scale(1.25) rotate(1deg);
   }
 `;
 
@@ -81,16 +88,48 @@ const About = () => {
   return (
     <StyledContainer name="about" className="element">
       <Grid container spacing={1}>
-        <Grid item md={4} sm={4} xs={12} style={{ display: "flex" }}>
+        <Grid item md={3} sm={4} xs={7} style={{ display: "flex" }}>
           <Box>
             <StyledBox>
-              <img src="static/profile.jpg" overflow="hidden" height="100%" />
+              <img src="static/profile.jpg" overflow="hidden" />
             </StyledBox>
           </Box>
         </Grid>
-        <Grid item md={4} sm={4} xs={12}>
+        <Grid item md={2} sm={8} xs={5}>
+          <h1>Melchior's Resume</h1>
+          <Grid container spacing={2} direction="column">
+            <Grid
+              item
+              md={12}
+              xs={12}
+              style={{ margin: "4vh auto", display: "block", width: "80px" }}
+            >
+              <Link onClick={handleOpen}>
+                <StyledLinkBox>
+                  <Visibility style={{ fontSize: 40, color: "#ffcc00" }} />
+                </StyledLinkBox>
+              </Link>
+            </Grid>
+            <Grid
+              item
+              md={12}
+              xs={12}
+              style={{ margin: "1vh auto", display: "block", width: "80px" }}
+            >
+              <Link
+                target="_blank"
+                href="https://github.com/Sakala85/Melchior_Resume/raw/master/public/files/Melchior's%20Resume.pdf"
+              >
+                <StyledLinkBox>
+                  <GetApp style={{ fontSize: 40, color: "#ffcc00" }} />
+                </StyledLinkBox>
+              </Link>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item md={4} xs={12} style={{ marginBottom: "2vh" }}>
           <Countdown
-            date={Date.UTC("2021", "04", "30", "00", "00", "00")}
+            date={Date.UTC("2021", "03", "30", "00", "00", "00")}
             renderer={StyledCountdown}
             daysInHours={false}
           />
@@ -151,36 +190,9 @@ const About = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item md={4} sm={4} xs={12}>
-          <Grid container spacing={3} direction="column">
-            <Grid
-              item
-              md={12}
-              xs={12}
-              style={{ margin: "8vh auto", display: "block", width: "80px" }}
-            >
-              <StyledLinkBox>
-                <Link onClick={handleOpen}>
-                  <Visibility style={{ fontSize: 40, color: "#ffcc00" }} />
-                </Link>
-              </StyledLinkBox>
-            </Grid>
-            <Grid
-              item
-              md={12}
-              xs={12}
-              style={{ margin: "3vh auto", display: "block", width: "80px" }}
-            >
-              <StyledLinkBox>
-                <Link
-                  target="_blank"
-                  href="https://github.com/Sakala85/Melchior_Resume/raw/master/public/files/Melchior's%20Resume.pdf"
-                >
-                  <GetApp style={{ fontSize: 40, color: "#ffcc00" }} />
-                </Link>
-              </StyledLinkBox>
-            </Grid>
-          </Grid>
+        <Grid item md={3} sm={12} xs={12} style={{ display: "flex" }}>
+          <h1>Interests</h1>
+          <InterestGrid />
         </Grid>
       </Grid>
       <Modal
