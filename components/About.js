@@ -1,13 +1,16 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import {
   Box,
   Container,
+  Dialog,
   Grid,
   Link,
   Typography,
   ButtonBase,
   Modal,
+  Chip,
+  Slide,
 } from "@material-ui/core";
 import styled from "styled-components";
 import { Element } from "react-scroll";
@@ -20,9 +23,22 @@ import {
 } from "@material-ui/icons";
 import Countdown from "react-countdown";
 import StyledCountdown from "components/StyledCountdown";
-import InterestGrid from "./InterestGrid";
 
 const transition = "250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms";
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
+
+const INTERESTS = [
+  "Travel",
+  "Design",
+  "IA",
+  "UI/UX",
+  "Ice Hockey",
+  "Mixology",
+  "Green energy",
+];
 
 const StyledContainer = styled(Element)`
   height: 100%;
@@ -190,21 +206,35 @@ const About = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item md={3} sm={12} xs={12} style={{ display: "flex" }}>
+        <Grid item md={3} sm={12} xs={12} style={{}}>
           <h1>Interests</h1>
-          <InterestGrid />
+          <Box style={{ width: "100%" }}>
+            {INTERESTS.map((interest) => {
+              return (
+                <Chip
+                  label={interest}
+                  style={{
+                    margin: "0 3px",
+                    backgroundColor: "#ffcc00",
+                  }}
+                />
+              );
+            })}
+          </Box>
         </Grid>
       </Grid>
-      <Modal
+      <Dialog
         open={open}
         onClose={handleClose}
+        TransitionComponent={Transition}
+        keepMounted
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
       >
         <StyledModalBox style={{ width: "500px", margin: "0 auto" }}>
           <img src="static/melchior-resume.png" />
         </StyledModalBox>
-      </Modal>
+      </Dialog>
     </StyledContainer>
   );
 };

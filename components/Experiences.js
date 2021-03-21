@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { Box, Grid, Link, Typography, ButtonBase } from "@material-ui/core";
+import {
+  Box,
+  Grid,
+  Link,
+  Typography,
+  ButtonBase,
+  LinearProgress,
+} from "@material-ui/core";
 import styled from "styled-components";
 import { Element } from "react-scroll";
 
@@ -42,93 +49,7 @@ const Experiences = () => {
       <Typography variant="h3" style={{ marginTop: "1vh" }}>
         Experiences
       </Typography>
-      <Grid
-        container
-        spacing={3}
-        style={{
-          width: "60%",
-          margin: "0 auto",
-          marginTop: "2vh",
-          textAlign: "center",
-        }}
-      >
-        <Grid item md={3} xs={6}>
-          <Typography variant="h5">SDSN</Typography>
-          <StyledLinkBox>
-            <Link target="_blank" href="https://github.com/Sakala85">
-              <StyledBox>
-                <img src="static/profile.jpg" overflow="hidden" height="100%" />
-              </StyledBox>{" "}
-            </Link>
-          </StyledLinkBox>
-        </Grid>
-        <Grid item md={3} xs={6}>
-          <Typography variant="h5">APHP</Typography>
-          <StyledLinkBox>
-            <Link
-              target="_blank"
-              href="https://www.linkedin.com/in/melchior-bengtsson-961349162/"
-            >
-              <StyledBox>
-                <img src="static/profile.jpg" overflow="hidden" height="100%" />
-              </StyledBox>{" "}
-            </Link>
-          </StyledLinkBox>
-        </Grid>
-        <Grid item md={3} xs={6}>
-          <Typography variant="h5">Freelance</Typography>
-          <StyledLinkBox>
-            <Link target="_blank" href="https://twitter.com/melchiobengts">
-              <StyledBox>
-                <img src="static/profile.jpg" overflow="hidden" height="100%" />
-              </StyledBox>{" "}
-            </Link>
-          </StyledLinkBox>
-        </Grid>
-        <Grid item md={3} xs={6}>
-          <Typography variant="h5">ProInclu</Typography>
-          <StyledLinkBox>
-            <Link
-              target="_blank"
-              href="https://www.instagram.com/melchiorbengtsson"
-            >
-              <StyledBox>
-                <img src="static/profile.jpg" overflow="hidden" height="100%" />
-              </StyledBox>{" "}
-            </Link>
-          </StyledLinkBox>
-        </Grid>
-      </Grid>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      Under construction... <LinearProgress />
     </StyledContainer>
   );
 };

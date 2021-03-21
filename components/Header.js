@@ -96,7 +96,7 @@ const Header = () => {
           <Box marginBottom={2}>
             <Title>Melchior Bengtsson</Title>
             <Subtitle>
-              <span>Developer Full Stack</span>
+              <span>Full Stack Developer</span>
             </Subtitle>
           </Box>
           <Box marginY={6} style={{ marginTop: "3vh" }}>
@@ -108,12 +108,16 @@ const Header = () => {
               (Node.js, React, next, React Natif)
             </Typography>
             <Typography
-              variant="body1"
+              variant="h5"
               gutterBottom
-              style={{ color: "#ffffff", marginTop: "5vh" }}
+              style={{
+                color: "#ffffff",
+                marginTop: "5vh",
+                fontStyle: "italic",
+              }}
             >
-              I love working to serve an objective who make sense to me, bring
-              my opinion on the project and bring my own point of view.
+              "I love working to serve a purpose that makes sense and where I
+              can contribute to the result of the project."
             </Typography>
           </Box>
           <Grid
