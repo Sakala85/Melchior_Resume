@@ -91,7 +91,7 @@ const Header = () => {
   return (
     <StyledContainer name="home" className="element">
       <ParticlesSection />
-      <Container style={{ position: "relative" }}>
+      <Container style={{ position: "relative", height: "100%" }}>
         <Hero display="flex" flexDirection="column" textAlign="center">
           <Box marginBottom={2}>
             <Title>Melchior Bengtsson</Title>
