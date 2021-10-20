@@ -9,6 +9,7 @@ import {
 } from "@material-ui/core";
 import styled from "styled-components";
 import { Element } from "react-scroll";
+import Timeline from "components/Timeline";
 
 const transition = "250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms";
 
@@ -49,6 +50,7 @@ const Experiences = () => {
       <Typography variant="h3" style={{ marginTop: "1vh" }}>
         Experiences
       </Typography>
+      <Timeline />
       Under construction... <LinearProgress />
     </StyledContainer>
   );
