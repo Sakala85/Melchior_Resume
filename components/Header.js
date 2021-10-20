@@ -31,6 +31,8 @@ const transition = "250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms";
 
 const StyledContainer = styled(Element)`
   height: 100vh;
+  min-height: -webkit-fill-available;
+  height: -webkit-fill-available;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
     url(static/header-background.jpg) center center no-repeat;
   -webkit-background-size: cover;
