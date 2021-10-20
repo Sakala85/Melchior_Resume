@@ -145,7 +145,7 @@ const About = () => {
         </Grid>
         <Grid item md={4} xs={12} style={{ marginBottom: "2vh" }}>
           <Countdown
-            date={Date.UTC("2021", "03", "30", "00", "00", "00")}
+            date={Date.UTC("2021", "12", "30", "00", "00", "00")}
             renderer={StyledCountdown}
             daysInHours={false}
           />

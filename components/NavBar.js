@@ -41,7 +41,7 @@ const NavBar = ({ page }) => {
   return (
     <StyledContainer>
       <Grid container>
-        <Grid xs={12}>
+        <Grid item xs={12}>
           <StyledLinkBox>
             <ScrollLink to="home" spy={true} smooth={true} duration={500}>
               <Home
@@ -54,7 +54,7 @@ const NavBar = ({ page }) => {
             </ScrollLink>
           </StyledLinkBox>
         </Grid>
-        <Grid xs={12}>
+        <Grid item xs={12}>
           <StyledLinkBox>
             <ScrollLink to="about" spy={true} smooth={true} duration={500}>
               <Info
@@ -67,7 +67,7 @@ const NavBar = ({ page }) => {
             </ScrollLink>
           </StyledLinkBox>
         </Grid>
-        <Grid xs={12}>
+        <Grid item xs={12}>
           <StyledLinkBox>
             <ScrollLink
               to="experiences"
