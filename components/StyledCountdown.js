@@ -13,7 +13,7 @@ import { Element, animateScroll as scroll } from "react-scroll";
 const StyledBox = styled(Container)`
   text-align: center;
   h1 {
-    color: #ffcc00;
+    color: #ecb7bf;
     font-weight: 70;
     font-size: 20px;
     margin: 10px 0px 10px;
@@ -32,13 +32,13 @@ const StyledBox = styled(Container)`
     padding: 10px;
     border-radius: 3px;
     margin: 1px;
-    background: #ffcc00;
+    background: #ecb7bf;
     display: inline-block;
   }
 
   #clockdiv div > span {
     padding: 10px;
-    background: #fad647;
+    background: #fbd2d7;
     display: inline-block;
   }
 

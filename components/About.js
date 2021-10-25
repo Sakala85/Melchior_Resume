@@ -42,9 +42,9 @@ const INTERESTS = [
 
 const StyledContainer = styled(Element)`
   height: 100%;
-  background: #666666;
+  background: #333333;
   h1 {
-    color: #ffcc00;
+    color: #ecb7bf;
     font-weight: 70;
     font-size: 20px;
     text-align: center;
@@ -69,7 +69,7 @@ const StyledModalBox = styled(Box)`
 const StyledLinkBox = styled(Box).attrs({
   component: ButtonBase,
 })`
-  border: 1px solid #ffcc00;
+  border: 1px solid #ecb7bf;
   border-radius: 50%;
   width: 80px;
   transition: transform ${transition}, top ${transition};
@@ -122,7 +122,7 @@ const About = () => {
             >
               <Link onClick={handleOpen}>
                 <StyledLinkBox>
-                  <Visibility style={{ fontSize: 40, color: "#ffcc00" }} />
+                  <Visibility style={{ fontSize: 40, color: "#ecb7bf" }} />
                 </StyledLinkBox>
               </Link>
             </Grid>
@@ -137,7 +137,7 @@ const About = () => {
                 href="https://github.com/Sakala85/Melchior_Resume/raw/master/public/files/Melchior's%20Resume.pdf"
               >
                 <StyledLinkBox>
-                  <GetApp style={{ fontSize: 40, color: "#ffcc00" }} />
+                  <GetApp style={{ fontSize: 40, color: "#ecb7bf" }} />
                 </StyledLinkBox>
               </Link>
             </Grid>
@@ -159,13 +159,13 @@ const About = () => {
               <LocationOn
                 style={{
                   fontSize: 30,
-                  color: "#ffcc00",
+                  color: "#ecb7bf",
                   float: "right",
                 }}
               />
             </Grid>
             <Grid item xs={8}>
-              <Typography variant="body1" style={{ color: "#ffcc00" }}>
+              <Typography variant="body1" style={{ color: "#ecb7bf" }}>
                 Paris, France
               </Typography>
             </Grid>
@@ -175,7 +175,7 @@ const About = () => {
               <Mail
                 style={{
                   fontSize: 30,
-                  color: "#ffcc00",
+                  color: "#ecb7bf",
                   float: "right",
                 }}
               />
@@ -183,7 +183,7 @@ const About = () => {
             <Grid item xs={8}>
               <Link
                 to="mailto:melchiorbengtsson@gmail.com"
-                style={{ color: "#ffcc00" }}
+                style={{ color: "#ecb7bf" }}
               >
                 melchiorbengtsson@gmail.com
               </Link>
@@ -194,13 +194,13 @@ const About = () => {
               <Phone
                 style={{
                   fontSize: 30,
-                  color: "#ffcc00",
+                  color: "#ecb7bf",
                   float: "right",
                 }}
               />
             </Grid>
             <Grid item xs={8}>
-              <Link href="tel:+33662014864" style={{ color: "#ffcc00" }}>
+              <Link href="tel:+33662014864" style={{ color: "#ecb7bf" }}>
                 +33 6 62 01 48 64
               </Link>
             </Grid>
@@ -215,7 +215,7 @@ const About = () => {
                   label={interest}
                   style={{
                     margin: "0 3px",
-                    backgroundColor: "#ffcc00",
+                    backgroundColor: "#ecb7bf",
                   }}
                 />
               );
