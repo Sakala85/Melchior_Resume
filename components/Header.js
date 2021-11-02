@@ -116,8 +116,9 @@ const Header = () => {
                 fontStyle: "italic",
               }}
             >
-              "I love working to serve a purpose that makes sense and where I
-              can contribute to the result of the project."
+              "My dreamed job, would be a job that gives me a sense of purpose
+              and fulfillment with a certain freedom in the workplace on a
+              creative level but also by providing me some kind of flexibility"
             </Typography>
           </Box>
           <Grid

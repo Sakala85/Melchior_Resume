@@ -30,14 +30,32 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-const INTERESTS = [
-  "Travel",
+const SKILLS = [
+  "Project management",
+  "Team management",
   "Design",
-  "IA",
   "UI/UX",
-  "Ice Hockey",
-  "Mixology",
-  "Green energy",
+  "Node.js",
+  "React",
+  "Flutter",
+  "Dart",
+  "next",
+  "Photoshop",
+  "Illustrator",
+  "InDesign",
+  "Excel",
+  "PowerPoint",
+  "iMovie",
+  "gitHub",
+  "SQL",
+  "MongoDB",
+  "C",
+  "HTML",
+  "CSS",
+  "PHP",
+  "React Natif",
+  "Netlify",
+  "AWS",
 ];
 
 const StyledContainer = styled(Element)`
@@ -207,12 +225,12 @@ const About = () => {
           </Grid>
         </Grid>
         <Grid item md={3} sm={12} xs={12} style={{}}>
-          <h1>Interests</h1>
+          <h1>Skills</h1>
           <Box style={{ width: "100%" }}>
-            {INTERESTS.map((interest) => {
+            {SKILLS.map((skill) => {
               return (
                 <Chip
-                  label={interest}
+                  label={skill}
                   style={{
                     margin: "0 3px",
                     backgroundColor: "#ecb7bf",
