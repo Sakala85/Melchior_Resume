@@ -25,7 +25,14 @@ const Experiences = () => {
       <Typography variant="h3" style={{ marginTop: "1vh", color: "#fff" }}>
         Experiences
       </Typography>
-      <Timeline />
+      <Grid container>
+        <Grid item xs={3}>
+          <img src="illustrations/ezgif.com-gif-maker (2).gif" style={{}} />
+        </Grid>
+        <Grid item xs={9}>
+          <Timeline />
+        </Grid>
+      </Grid>
       Under construction... <LinearProgress />
     </StyledContainer>
   );
