@@ -31,6 +31,7 @@ const transition = "250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms";
 
 const StyledContainer = styled(Element)`
   min-height: 100vh;
+  max-height: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
     url(static/header-background.jpg) center center no-repeat;
   -webkit-background-size: cover;
@@ -77,7 +78,7 @@ const Subtitle = styled(Typography).attrs({
   component: "h4",
 })`
   ${(props) => props.theme.breakpoints.down("sm")} {
-    font-size: 2.3rem !important;
+    font-size: 1.8rem !important;
   }
   && {
     color: #ffffff;
@@ -116,9 +117,8 @@ const Header = () => {
                 fontStyle: "italic",
               }}
             >
-              "My dreamed job, would be a job that gives me a sense of purpose
-              and fulfillment with a certain freedom in the workplace on a
-              creative level but also by providing me some kind of flexibility"
+              "Looking for a job that gives me a sense of purpose and
+              fulfillment with freedom in the workplace on a creative level"
             </Typography>
           </Box>
           <Grid
@@ -127,7 +127,6 @@ const Header = () => {
             style={{
               width: "60%",
               margin: "0 auto",
-              marginTop: "5vh",
               height: "100%",
             }}
           >
