@@ -26,9 +26,9 @@ const Experiences = () => {
         Experiences
       </Typography>
       <Grid container>
-        <Grid item xs={3}>
+        {/* <Grid item xs={3}>
           <img src="illustrations/ezgif.com-gif-maker (2).gif" style={{}} />
-        </Grid>
+        </Grid> */}
         <Grid item xs={9}>
           <Timeline />
         </Grid>
