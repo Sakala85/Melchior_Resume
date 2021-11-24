@@ -29,7 +29,7 @@ const Experiences = () => {
         {/* <Grid item xs={3}>
           <img src="illustrations/ezgif.com-gif-maker (2).gif" style={{}} />
         </Grid> */}
-        <Grid item xs={9}>
+        <Grid item xs={12}>
           <Timeline />
         </Grid>
       </Grid>
