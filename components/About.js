@@ -152,7 +152,7 @@ const About = () => {
             >
               <Link
                 target="_blank"
-                href="https://github.com/Sakala85/Melchior_Resume/raw/master/public/files/Melchior's%20Resume.pdf"
+                href="https://github.com/Sakala85/Melchior_Resume/blob/master/public/files/Melchior's%20Resume.pdf"
               >
                 <StyledLinkBox>
                   <GetApp style={{ fontSize: 40, color: "#ecb7bf" }} />
@@ -163,7 +163,7 @@ const About = () => {
         </Grid>
         <Grid item md={4} xs={12} style={{ marginBottom: "2vh" }}>
           <Countdown
-            date={Date.UTC("2021", "12", "30", "00", "00", "00")}
+            date={Date.UTC("2023", "04", "30", "00", "00", "00")}
             renderer={StyledCountdown}
             daysInHours={false}
           />

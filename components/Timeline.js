@@ -50,6 +50,65 @@ const Timeline = () => {
         >
           <Grid container>
             <Grid item xs={12}>
+              <StyledChip label={"React"} />
+              <StyledChip label={"Python"} />
+              <StyledChip label={"SQL"} />
+              <StyledChip label={"API"} />
+              <StyledChip label={"API Doc"} />
+            </Grid>
+            <Grid item xs={12}>
+              <h3 className="vertical-timeline-element-title">Ezus</h3>
+              <h4 className="vertical-timeline-element-subtitle">
+                Full Stack Developer
+              </h4>
+              <ul>
+                <li>
+                  Development of features, Front/Back Fix and recovery scripts
+                  for SAS Software
+                </li>
+              </ul>
+            </Grid>
+          </Grid>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentStyle={{ background: "#ecb7bf", color: "#666666" }}
+          contentArrowStyle={{ borderRight: "7px solid  #ecb7bf" }}
+          date="June 2021 - present"
+          iconStyle={{ background: "#ecb7bf", color: "#666666" }}
+          icon={<Work />}
+        >
+          <Grid container>
+            <Grid item xs={12}>
+              <StyledChip label={"Team Management"} />
+              <StyledChip label={"Order Management"} />
+              <StyledChip label={"Pay"} />
+              <StyledChip label={"Menu Creation"} />
+            </Grid>
+            <Grid item xs={12}>
+              <h3 className="vertical-timeline-element-title">
+                Maison Lautrec
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle">Manager</h4>
+              <ul>
+                <li>
+                  Management of the team, schedules, payroll, orders,
+                  reservations and restaurant services
+                </li>
+              </ul>
+            </Grid>
+          </Grid>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentStyle={{ background: "#ecb7bf", color: "#666666" }}
+          contentArrowStyle={{ borderRight: "7px solid  #ecb7bf" }}
+          date="June 2021 - present"
+          iconStyle={{ background: "#ecb7bf", color: "#666666" }}
+          icon={<Work />}
+        >
+          <Grid container>
+            <Grid item xs={12}>
               <StyledChip label={"Dart"} />
               <StyledChip label={"Flutter"} />
               <StyledChip label={"Node.js"} />
