@@ -9,7 +9,7 @@ class MyDocument extends Document {
         <Head>
           <meta
             httpEquiv="Content-Security-Policy"
-            content="script-src 'self' 'wasm-unsafe-eval' 'inline-speculation-rules' chrome-extension: https://www.googletagmanager.com;"
+            content="script-src 'self' 'wasm-unsafe-eval' 'inline-speculation-rules' chrome-extension: https://www.googletagmanager.com https://cache.consentframework.com; script-src-elem 'self' chrome-extension: https://www.googletagmanager.com https://cache.consentframework.com;"
           />
           <script
             async
