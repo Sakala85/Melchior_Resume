@@ -8,22 +8,22 @@ class MyDocument extends Document {
       <Html>
         <Head>
           {/* Add support for Privacy Sandbox and first-party data */}
-          {/* <meta name="privacy-sandbox" content="enabled" />
+          <meta name="privacy-sandbox" content="enabled" />
           <script
             async
             src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`}
             data-cookieless="true"
-          /> */}
+          />
         </Head>
         <body>
-          {/* <noscript>
+          <noscript>
             <iframe
               src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
               height="0"
               width="0"
               style={{ display: "none", visibility: "hidden" }}
             />
-          </noscript> */}
+          </noscript>
           <Main />
           <NextScript />
         </body>
