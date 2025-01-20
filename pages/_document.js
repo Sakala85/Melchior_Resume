@@ -7,13 +7,12 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta
-            httpEquiv="Content-Security-Policy"
-            content="script-src 'self' 'wasm-unsafe-eval' 'inline-speculation-rules' chrome-extension: https://www.googletagmanager.com https://cache.consentframework.com; script-src-elem 'self' chrome-extension: https://www.googletagmanager.com https://cache.consentframework.com;"
-          />
+          {/* Add support for Privacy Sandbox and first-party data */}
+          <meta name="privacy-sandbox" content="enabled" />
           <script
             async
             src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`}
+            data-cookieless="true"
           />
         </Head>
         <body>
