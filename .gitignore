@@ -1,7 +1,3 @@
-node_modules
-.next
+_to_delete/
 .DS_Store
-.~lock*#
-
-# Next export
-out/
+node_modules/
